@@ -1,0 +1,127 @@
+# dune utop
+# OCAMLPARAM: unset
+# Workspace root: /Users/zzh/Desktop/HW3/hw3_stub
+$ /usr/bin/getconf _NPROCESSORS_ONLN > /var/folders/fs/8n2tr66s3172sdhtjd039rz80000gn/T/dune40df20.output 2> /dev/null
+# Auto-detected concurrency: 8
+# disable binary cache
+$ /usr/local/bin/ocamlc.opt -config > /var/folders/fs/8n2tr66s3172sdhtjd039rz80000gn/T/dune55d943.output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dyn
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = "default"
+#  ; toplevel_path = Some External "/Users/zzh/.opam/default/lib/toplevel"
+#  ; ocaml_bin = External "/usr/local/bin"
+#  ; ocaml = Ok External "/Users/zzh/.opam/default/bin/ocaml"
+#  ; ocamlc = External "/usr/local/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/usr/local/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/usr/local/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/usr/local/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/Users/zzh/.opam/default/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/usr/local/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/zzh/Desktop/HW3/hw3_stub"
+#        ; "INSIDE_DUNE" : "/Users/zzh/Desktop/HW3/hw3_stub/_build/default"
+#        ; "MANPATH" :
+#            "/Users/zzh/Desktop/HW3/hw3_stub/_build/install/default/bin"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/Users/zzh/Desktop/HW3/hw3_stub/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/Users/zzh/Desktop/HW3/hw3_stub/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/Users/zzh/Desktop/HW3/hw3_stub/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_path = [ External "/Users/zzh/.opam/default/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.12.0"
+#      ; standard_library_default = "/usr/local/lib/ocaml"
+#      ; standard_library = "/usr/local/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "clang"
+#      ; ocamlc_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; ocamlopt_cflags = [ "-O2"; "-fno-strict-aliasing"; "-fwrapv" ]
+#      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64"; "-D_REENTRANT" ]
+#      ; bytecomp_c_compiler =
+#          [ "clang"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "clang"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-D_REENTRANT"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "macosx"
+#      ; asm = [ "clang"; "-arch"; "x86_64"; "-Wno-trigraphs"; "-c" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-apple-darwin20.3.0"
+#      ; target = "x86_64-apple-darwin20.3.0"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X029"
+#      ; cmi_magic_number = "Caml1999I029"
+#      ; cmo_magic_number = "Caml1999O029"
+#      ; cma_magic_number = "Caml1999A029"
+#      ; cmx_magic_number = "Caml1999Y029"
+#      ; cmxa_magic_number = "Caml1999Z029"
+#      ; ast_impl_magic_number = "Caml1999M029"
+#      ; ast_intf_magic_number = "Caml1999N029"
+#      ; cmxs_magic_number = "Caml1999D029"
+#      ; cmt_magic_number = "Caml1999T029"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /usr/local/bin/ocamldep.opt -modules -impl src/interp.ml) > _build/default/src/.proc.objs/interp.ml.d
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I src/.proc.objs/byte -no-alias-deps -opaque -open Proc -o src/.proc.objs/byte/proc__Interp.cmo -c -impl src/interp.ml)
+> File "src/interp.ml", line 98, characters 4-86:
+> 98 |     (** eval_expr target first, if target is ea_result then check if it is a treeVal*)
+>          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> Warning 50 [unexpected-docstring]: unattached documentation comment (ignored)
+> File "src/interp.ml", line 99, characters 4-48:
+> 99 |     (** if it is emptyTree, just do emptycase *)
+>          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> Warning 50 [unexpected-docstring]: unattached documentation comment (ignored)
+> File "src/interp.ml", line 100, characters 4-77:
+> 100 |     (** if it is not a emptyTree, store root, l, r to env then do nodecase *)
+>           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> Warning 50 [unexpected-docstring]: unattached documentation comment (ignored)
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -a -o src/proc.cma src/.proc.objs/byte/proc.cmo src/.proc.objs/byte/proc__Ast.cmo src/.proc.objs/byte/proc__Parser.cmo src/.proc.objs/byte/proc__Lexer.cmo src/.proc.objs/byte/proc__Ds.cmo src/.proc.objs/byte/proc__Interp.cmo)
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -24 -g -bin-annot -I src/.utop/.utop.eobjs/byte -I /Users/zzh/.opam/default/lib/bytes -I /Users/zzh/.opam/default/lib/camomile -I /Users/zzh/.opam/default/lib/camomile/default_config -I /Users/zzh/.opam/default/lib/camomile/dyn -I /Users/zzh/.opam/default/lib/camomile/lib_default -I /Users/zzh/.opam/default/lib/camomile/library -I /Users/zzh/.opam/default/lib/charInfo_width -I /Users/zzh/.opam/default/lib/findlib -I /Users/zzh/.opam/default/lib/lambda-term -I /Users/zzh/.opam/default/lib/lwt -I /Users/zzh/.opam/default/lib/lwt/unix -I /Users/zzh/.opam/default/lib/lwt_log -I /Users/zzh/.opam/default/lib/lwt_log/core -I /Users/zzh/.opam/default/lib/lwt_react -I /Users/zzh/.opam/default/lib/mew -I /Users/zzh/.opam/default/lib/mew_vi -I /Users/zzh/.opam/default/lib/mmap -I /Users/zzh/.opam/default/lib/ocplib-endian -I /Users/zzh/.opam/default/lib/ocplib-endian/bigstring -I /Users/zzh/.opam/default/lib/react -I /Users/zzh/.opam/default/lib/result -I /Users/zzh/.opam/default/lib/seq -I /Users/zzh/.opam/default/lib/trie -I /Users/zzh/.opam/default/lib/utop -I /Users/zzh/.opam/default/lib/zed -I /usr/local/lib/ocaml/compiler-libs -I /usr/local/lib/ocaml/threads -I src/.proc.objs/byte -no-alias-deps -o src/.utop/.utop.eobjs/byte/dune__exe__Utop.cmo -c -impl src/.utop/utop.ml-gen)
+$ (cd _build/default && /usr/local/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -24 -g -o src/.utop/utop.exe -output-complete-exe /usr/local/lib/ocaml/compiler-libs/ocamlcommon.cma /usr/local/lib/ocaml/compiler-libs/ocamlbytecomp.cma /usr/local/lib/ocaml/compiler-libs/ocamltoplevel.cma /Users/zzh/.opam/default/lib/findlib/findlib.cma /Users/zzh/.opam/default/lib/findlib/findlib_top.cma /Users/zzh/.opam/default/lib/result/result.cma /Users/zzh/.opam/default/lib/lwt/lwt.cma /usr/local/lib/ocaml/unix.cma -I /usr/local/lib/ocaml /usr/local/lib/ocaml/bigarray.cma -I /usr/local/lib/ocaml /Users/zzh/.opam/default/lib/mmap/mmap.cma /Users/zzh/.opam/default/lib/ocplib-endian/ocplib_endian.cma /Users/zzh/.opam/default/lib/ocplib-endian/bigstring/ocplib_endian_bigstring.cma /usr/local/lib/ocaml/threads/threads.cma -I /usr/local/lib/ocaml /Users/zzh/.opam/default/lib/lwt/unix/lwt_unix.cma -I /Users/zzh/.opam/default/lib/lwt/unix /Users/zzh/.opam/default/lib/react/react.cma /Users/zzh/.opam/default/lib/lwt_react/lwt_react.cma /Users/zzh/.opam/default/lib/camomile/default_config/camomileDefaultConfig.cma /Users/zzh/.opam/default/lib/camomile/library/camomileLibrary.cma /Users/zzh/.opam/default/lib/camomile/lib_default/camomileLibraryDefault.cma /Users/zzh/.opam/default/lib/camomile/dyn/camomileLibraryDyn.cma /Users/zzh/.opam/default/lib/camomile/camomile_yuge.cma /Users/zzh/.opam/default/lib/charInfo_width/charInfo_width.cma /Users/zzh/.opam/default/lib/zed/zed.cma /Users/zzh/.opam/default/lib/lwt_log/core/lwt_log_core.cma /Users/zzh/.opam/default/lib/lwt_log/lwt_log.cma /Users/zzh/.opam/default/lib/trie/trie.cma /Users/zzh/.opam/default/lib/mew/mew.cma /Users/zzh/.opam/default/lib/mew_vi/mew_vi.cma /Users/zzh/.opam/default/lib/lambda-term/lambda_term.cma -I /Users/zzh/.opam/default/lib/lambda-term /Users/zzh/.opam/default/lib/utop/uTop.cma src/proc.cma src/.utop/.utop.eobjs/byte/dune__exe__Utop.cmo -linkall -warn-error -31)

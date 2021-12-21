@@ -1,0 +1,18 @@
+(** @canonical Proc.Ast *)
+module Ast = Proc__Ast
+
+
+(** @canonical Proc.Ds *)
+module Ds = Proc__Ds
+
+
+(** @canonical Proc.Interp *)
+module Interp = Proc__Interp
+
+
+(** @canonical Proc.Lexer *)
+module Lexer = Proc__Lexer
+
+
+(** @canonical Proc.Parser *)
+module Parser = Proc__Parser

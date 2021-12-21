@@ -1,0 +1,34 @@
+(** @canonical Checked.Ast *)
+module Ast = Checked__Ast
+
+
+(** @canonical Checked.Checker *)
+module Checker = Checked__Checker
+
+
+(** @canonical Checked.Ds *)
+module Ds = Checked__Ds
+
+
+(** @canonical Checked.Dst *)
+module Dst = Checked__Dst
+
+
+(** @canonical Checked.Interp *)
+module Interp = Checked__Interp
+
+
+(** @canonical Checked.Lexer *)
+module Lexer = Checked__Lexer
+
+
+(** @canonical Checked.Parser *)
+module Parser = Checked__Parser
+
+
+(** @canonical Checked.ReM *)
+module ReM = Checked__ReM
+
+
+(** @canonical Checked.Store *)
+module Store = Checked__Store

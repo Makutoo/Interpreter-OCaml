@@ -1,0 +1,22 @@
+(** @canonical Sool.Ast *)
+module Ast = Sool__Ast
+
+
+(** @canonical Sool.Ds *)
+module Ds = Sool__Ds
+
+
+(** @canonical Sool.Interp *)
+module Interp = Sool__Interp
+
+
+(** @canonical Sool.Lexer *)
+module Lexer = Sool__Lexer
+
+
+(** @canonical Sool.Parser *)
+module Parser = Sool__Parser
+
+
+(** @canonical Sool.Store *)
+module Store = Sool__Store

@@ -1,0 +1,18 @@
+(** @canonical Recq.Ast *)
+module Ast = Recq__Ast
+
+
+(** @canonical Recq.Ds *)
+module Ds = Recq__Ds
+
+
+(** @canonical Recq.Interp *)
+module Interp = Recq__Interp
+
+
+(** @canonical Recq.Lexer *)
+module Lexer = Recq__Lexer
+
+
+(** @canonical Recq.Parser *)
+module Parser = Recq__Parser
